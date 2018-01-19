@@ -1,0 +1,50 @@
+Assim como o servelet
+  <servlet>
+  	<servlet-name>servletOiMundo</servlet-name>
+  	<servlet-class>br.com.caelum.servlet.OiMundo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servletOiMundo</servlet-name>
+  	<url-pattern>/oi</url-pattern>
+  </servlet-mapping>
+
+Podemos configurar tb o FILTER
+  <filter>
+  <filter-name>aaa</filter-name>
+  <filter-class>aaaa</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>aaa</filter-name>
+  	<url-pattern>/.*</url-pattern>
+  </filter-mapping>
+
+
+===
+SRPINT
+====
+
+Funciona como Servlet controler do MVC, mas ele ja tem o controler
+então precisamos usar o web.xml para apontar para o servlet dele
+
+Depois criamos a classe Logic, que agora se chama Controller rsrs
+enfim, essa classe precisa de um anotation @Controller na classe
+e nos metodos vao ter um @RequestMapping, que ELES SERAO o endereco a ser chamado na URL
+e TEMOS AGORA UM PRA CADA METODO dentro de uma unica classe, q legal!!
+
+os JSP para nao ser acessados direto, vamos por dentro do WEB-INF/views/
+
+No arquivo de conf do srping-context.xml, temos algumas opcoes
+<bean>
+<context:component-scan> limita a partir de onde o spring procura por classes com @Contorler
+<mvc: anotation-driver> indica que usaremos anotacoes nos metodos para ele criar as urls
+Internal Resolver
+	prefix - prefixo do camiho onde estap salvas as views
+	sufix - extensao que estao as views
+
+
+
+
+
+ 
+
+

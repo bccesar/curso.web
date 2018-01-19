@@ -1,0 +1,50 @@
+aula02
+=====================
+
+Projeto WEB tomcat
+
+Pasta WebContent
+	todas as paginas que podem ser abertas no browser
+
+Pasta WEB-INF
+	tudo oque nao pode ser acessado pelo browser
+	todas as .class compliadas que o site precisa
+	os .jar necessários para o site web
+
+Para publicar manualmente no TOMCAT
+	Onde ele esta instalado, a pasta webapps é onde ficam todos os contextos,
+	Para se publicar na raiz, usar a pasta ROOT
+	Para criar um novo contexto, basta jogar o conteudo do WebContent do seu projeto nessa nova pasta
+
+
+Servelets
+	Tecnologia de criacao de paginas dinamicas do JAVA
+
+public class HoraAtual extends HttpServelt{
+
+	@Overrride
+	public void service(HttpServeltRequest req, HttpServeltResponse resp){
+
+	}
+
+}
+Como faco essa classe como uma pagina?
+No arquivo web.xml, configuramos como abaixo
+
+<servelt>
+	<servlet_name>HoraAtual<servelt_name> -nome da chave
+	<servlet_class>br.com.caelum.agenda.servlet.HoraAtual<servelt_class> -classe q chama
+</servelt>
+<servelt_mapping>
+	<servelt_name>HoraAtual</servelt_name> -nome da chave
+	<servelt_pattern>/HoraAtual</servelt_pattern> -url que vai atendeer
+</servelt_mapping>
+
+
+OU
+
+Hoje em dia pode colocar uma anotacao na classe logo antes do inicio da classe
+@WebServelet(urlPatterns="/horaAtual")
+
+
+

@@ -1,0 +1,6 @@
+<fmt:formatDate value="${value}" pattern="dd/MM/yyyy" />
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+
+${value}
