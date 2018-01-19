@@ -1,6 +1,8 @@
-<fmt:formatDate value="${value}" pattern="dd/MM/yyyy" />
+Spring
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+============
+Hibernate
+ORM - Mapeamento Objeto Relacional
+Hoje é documentado JPA - Java Persistence API
 
 
-${value}
